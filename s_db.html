@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&family=Oswald:wght@300&family=Poppins:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/aec557161b.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <link rel="stylesheet" href="css/amenu.css">
+</head>
+<body>
+
+        <!-- NAVBAR  -->
+    
+        <nav class="navbar  navbar-expand-lg navbar-light text-uppercase  nb">
+            <i class="fa-solid fa-user ml-2"></i>
+            <small class="ml-3">Ahmed ali</small>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center ml-5" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+             <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+             </li>
+               <li class="nav-item">
+                <a href="" class="nav-link">PROFILE</a>
+               </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">contact us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">about us</a>
+                  </li>
+                  <a href="#" class="link ml-5 mt-2"><i class="fa-solid fa-bell"></i></a>
+                  <a href="#" class="link ml-5 mt-2"><i class="fa-solid fa-envelope"></i></a>
+              </ul>
+            </div>
+          </nav>
+    
+    <!-- NAV END  -->
+    <h1 class="mt-5 text-capitalize text-center">Seller Dashboard</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 mt-5">
+              <div class="card c1 text-white">
+                <h3 class="ml-3 mt-4">10+</h3>
+                <p class="ml-3">new orders </p>
+                <a href="#" class="btn text-white">See more info</a>
+
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 mt-5">
+              <div class="card c2 text-white">
+                <h3 class="ml-3 mt-4">100%</h3>
+                <p class="ml-3">Todays revenue</p>
+                <a href="#" class="btn text-white">See more info</a>
+
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 mt-5">
+              <div class="card c3 text-white">
+                <h3 class="ml-3 mt-4">20</h3>
+                <p class="ml-3">delivered orders </p>
+                <a href="#" class="btn text-white">See more info</a>
+
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 mt-5">
+              <div class="card c4 text-white">
+                <h3 class="ml-3 mt-4">6</h3>
+                <p class="ml-3">pending orders </p>
+                <a href="#" class="btn text-white">See more info</a>
+
+              </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 mt-5">
+                <canvas id="myChart" style="width:100%;max-width:700px;height:400px;"></canvas>
+                <script>
+                  var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+                  new Chart("myChart", {
+                    type: "line",
+                    data: {
+                      labels: xValues,
+                      datasets: [{ 
+                        data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                        borderColor: "red",
+                        fill: false
+                      }, { 
+                        data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                        borderColor: "green",
+                        fill: false
+                      }, { 
+                        data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                        borderColor: "blue",
+                        fill: false
+                      }]
+                    },
+                    options: {
+                      legend: {display: false}
+                    }
+                  });
+                </script>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 mt-5" style="margin-right:190px;">
+                <table class="table table-bordered ml-5 mt-2 text-center">
+                  <tr>
+                    <th>
+                      <h5>Completed</h5>
+                     40
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <h5>Recieved</h5>
+                     80
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <h5>Average First response time</h5>
+                     1h 10m
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <h5>Average delivery time</h5>
+                     45 mins
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <h5>Customer sastisfaction</h5>
+                     80%
+                    </th>
+                  </tr>
+                </table>
+
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="card mt-5" style="width:500px;">
+                  <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Custom Orders</h4>
+                    <sub class=" font-weight-bold text-info" style="margin-left:250px;margin-bottom:30px;">View Details</sub>
+                    <br>
+                    <sub>Group support</sub>
+                    <br>
+                    <br>
+                    <p class="card-text">No beef please....<span class="text-secondary" style="margin-left:150px;">10 person</span><span class="ml-5 text-secondary">userXYZ</span></p>
+                    <hr>
+                    <p class="card-text">No beef please....<span class="text-secondary" style="margin-left:150px;">10 person</span><span class="ml-5 text-secondary">userXYZ</span></p>
+                    <hr>
+                    <p class="card-text">No beef please....<span class="text-secondary" style="margin-left:150px;">10 person</span><span class="ml-5 text-secondary">userXYZ</span></p>
+                    <hr>
+                    <p class="card-text">No beef please....<span class="text-secondary" style="margin-left:150px;">10 person</span><span class="ml-5 text-secondary">userXYZ</span></p>
+                    <hr>
+                    <p class="card-text">No beef please....<span class="text-secondary" style="margin-left:150px;">10 person</span><span class="ml-5 text-secondary">userXYZ</span></p>
+                    <hr>
+                    <p class="card-text">No beef please....<span class="text-secondary" style="margin-left:150px;">10 person</span><span class="ml-5 text-secondary">userXYZ</span></p>
+                   
+                    <!-- <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4 mt-5">
+                <div class="card mt-5" style="width:500px;margin-left:200px;">
+                  <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Tasks</h4>
+                    <sub class=" font-weight-bold text-info" style="margin-left:250px;margin-bottom:30px;">View all</sub>
+                    <br>
+                    <sub>Today</sub>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="card-text text-secondary">Create new task....</p>
+                    <hr>
+                    <p class="card-text">Finish Orders today</p>
+                    <hr>
+                    <p class="card-text">Create new menu for veg</p>
+                    <hr>
+                    <p class="card-text">update serving size</p>
+                    
+                   
+                    <!-- <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+          <!-- Site footer -->
+
+          <footer class="site-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <h6>About</h6>
+                  <a href=""><img src="images/High Resolution Logo - Transparent Background (1).png" class="logo mt-2"></a>
+                  <br>
+                  <br>
+                  <p class="text-justify"><i>LUNCH MUNCH</i>  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis officia saepe non magni nostrum assumenda. Perferendis eum cum cumque quibusdam pariatur minima molestias deserunt animi. Aut ad ducimus debitis odit, voluptas asperiores cupiditate consectetur sed laboriosam! Officia corrupti nisi possimus.</p>
+                </div>
+      
+                <div class="col-xs-6 col-md-3">
+                  <h6>Categories</h6>
+                  <ul class="footer-links">
+                    <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                    <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                    <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                    <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                    <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                    <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                  </ul>
+                </div>
+      
+                <div class="col-xs-6 col-md-3">
+                  <h6>Quick Links</h6>
+                  <ul class="footer-links">
+                    <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                    <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                    <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                    <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                  </ul>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                  <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+               <a href="#">Shehzonia Fatima</a>.
+                  </p>
+                </div>
+      
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                  </ul>
+                </div>
+              </div>
+            </div>
+      </footer>
+</body>
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>`
+
+<!-- font awesome kit -->
+<script src="https://kit.fontawesome.com/aec557161b.js" crossorigin="anonymous"></script>
+
+<!-- AOS js -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</html>
