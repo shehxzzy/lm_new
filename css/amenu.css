@@ -256,5 +256,9 @@ button:hover{
   background-color: #6495ED;
 }
 
-/* REVIEWS CSS */
+/* MENU DETAILS CSS */
+
+.para{
+  display: flex;
+}
 
