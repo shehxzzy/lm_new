@@ -262,3 +262,13 @@ button:hover{
   display: flex;
 }
 
+/* CONFIRM CSS */
+
+.frm1{
+  margin-top:140px;
+  margin-left:-350px;
+}
+.frm2{
+margin-left:60px;
+margin-top: 140px;
+}
